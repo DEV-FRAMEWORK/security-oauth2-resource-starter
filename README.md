@@ -1,4 +1,5 @@
 # 주요내용 #
 
-* OAUTH2 Resource Server 예제 
-* @EnableGlobalMethodSecurity 예제 
+* OAuth2.0 Resource Server 예제 
+
+* Annotation : @EnableGlobalMethodSecurity 예제 

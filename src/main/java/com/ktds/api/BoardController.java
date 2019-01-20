@@ -12,7 +12,7 @@ import java.util.Map;
 public class BoardController {
 
     @RequestMapping("/list")
-    @PreAuthorize("hasAnyRole('ADMIN2')")
+    @PreAuthorize("hasAnyRole('ADMIN')")
     public Map<String, String> list(){
         Map<String, String > map = new HashMap<>();
         map.put("row","제대로 나오고 있어용 ");

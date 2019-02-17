@@ -2,8 +2,8 @@
 
 * OAuth2.0 Resource Server 예제 
 
-* 해당 Annotation : @EnableResourceServer
+* 해당 Annotation 
+- @EnableResourceServer
+- @EnableGlobalMethodSecurity(prePostEnabled = true)
 
-* Annotation : @EnableGlobalMethodSecurity 예제 
-
-* Service URL : http://localhost:8090
+* Service URL : http://localhost:8090/api/list

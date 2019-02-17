@@ -2,20 +2,37 @@
 spring:
   application:
     name: API
+  datasource:
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://sport-saas-psql.cf37vedvxld3.ap-northeast-2.rds.amazonaws.com:5432/sportsaas?autoReconnect=true&useSSL=false
+    url: jdbc:postgresql://localhost:5432/journal?autoReconnect=true&useSSL=false
+    username: redmine
+    #password: ENC(2L3MvBFx+sCd0DQ79sMY6wR0bJvSGq3R)
+    password: redmine!@
+
+mybatis:
+  mapper-locations: classpath:mappers/**/*.xml
+  configuration:
+    lazyLoadingEnabled: true
+    aggressiveLazyLoading: false
+    mapUnderscoreToCamelCase: true
+    
 server:
   port: 8090
-security:
-  oauth2:
-    resource:
-          id: A-API
-          loadBalanced: true
-          jwt:
-            keyValue: -----BEGIN PUBLIC KEY-----
-                      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiJAaqvLq1kBXLrfGHqdo
-                      5KvhGAH1Qhf5Yt9MGmWQB3NHwbfSy/7yULKWdLkZCY3jWWsAmXb4vgWL/w5HLRJM
-                      gx2P2BQAdBLi+OyPbeFsRR1cMod/p9tLLc4RT5XMH3xA5RNfa3OxzGPSKHVQDi2a
-                      9ghPSA9v3RHBpoApolY3gdYaOUjrKTo9/sl9PtQpOkcUBV5/O7VyG2T5yT9ijlgz
-                      7tnH8BhoKIQ2xuJ9c3W/vdUmebB6uZRGYP8Pd+ZODnNwtA5eveJ4oR3H4bh75664
-                      C03z4I/KocMNM7Y9BM4i6HJi3le4TG5TIKjdW6b6nYrqJfuVFkvI/VFasFuMukKE
-                      qwIDAQAB
-                      -----END PUBLIC KEY-----
+#security:
+#  oauth2:
+#    resource:
+#          id: A-API
+#          loadBalanced: true
+#          jwt:
+#            keyValue: -----BEGIN PUBLIC KEY-----
+#                      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiJAaqvLq1kBXLrfGHqdo
+#                      5KvhGAH1Qhf5Yt9MGmWQB3NHwbfSy/7yULKWdLkZCY3jWWsAmXb4vgWL/w5HLRJM
+#                      gx2P2BQAdBLi+OyPbeFsRR1cMod/p9tLLc4RT5XMH3xA5RNfa3OxzGPSKHVQDi2a
+#                      9ghPSA9v3RHBpoApolY3gdYaOUjrKTo9/sl9PtQpOkcUBV5/O7VyG2T5yT9ijlgz
+#                      7tnH8BhoKIQ2xuJ9c3W/vdUmebB6uZRGYP8Pd+ZODnNwtA5eveJ4oR3H4bh75664
+#                      C03z4I/KocMNM7Y9BM4i6HJi3le4TG5TIKjdW6b6nYrqJfuVFkvI/VFasFuMukKE
+#                      qwIDAQAB
+#                      -----END PUBLIC KEY-----
+                      

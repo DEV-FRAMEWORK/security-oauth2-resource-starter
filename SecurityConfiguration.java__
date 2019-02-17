@@ -1,4 +1,4 @@
-package com.ktds.config;
+package com.ktds.service;
 
 
 import org.springframework.context.annotation.Configuration;
@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Configuration
-@EnableResourceServer
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableResourceServer
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
 
     @Override
@@ -29,22 +29,22 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
                 .resourceId("A-API");
     }
 
-    @Override
-    public void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .exceptionHandling()
-                .authenticationEntryPoint(restAuthenticationEntryPoint())
-                .accessDeniedHandler(restAccessDeniedHandler())
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authorizeRequests().anyRequest().authenticated();
-                //.and()
-                //.csrf()
-                //.csrfTokenRepository(csrfTokenRepository()).and()
-                //.addFilterBefore(new RequestContextFilter(), HeaderWriterFilter.class)
-                //.addFilterAfter(filterSecurityInterceptor(), FilterSecurityInterceptor.class);
-    }
+//    @Override
+//    public void configure(HttpSecurity http) throws Exception {
+//        http.csrf().disable()
+//                .exceptionHandling()
+//                .authenticationEntryPoint(restAuthenticationEntryPoint())
+//                .accessDeniedHandler(restAccessDeniedHandler())
+//                .and()
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//                .and()
+//                .authorizeRequests().anyRequest().authenticated();
+//                //.and()
+//                //.csrf()
+//                //.csrfTokenRepository(csrfTokenRepository()).and()
+//                //.addFilterBefore(new RequestContextFilter(), HeaderWriterFilter.class)
+//                //.addFilterAfter(filterSecurityInterceptor(), FilterSecurityInterceptor.class);
+//    }
 
 
     public RestAuthenticationEntryPoint restAuthenticationEntryPoint(){

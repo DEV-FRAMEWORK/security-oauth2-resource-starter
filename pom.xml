@@ -24,15 +24,23 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	<repositories>
-		<!-- local -->
+	<!-- <repositories>
 		<repository>
 			<id>local-repo</id>
 			<name>Inner Nexus Repository</name>
-			<!-- <url>http://localhost:8081/repository/B-Repos</url> -->
 			<url>file://Users/yonghuipark/.m2/repository</url>
 		</repository>
-	</repositories>
+	</repositories> -->
+
+	<!-- <repositories> -->
+		<!-- local -->
+		<!-- <repository> -->
+			<!-- <id>local-repo</id>
+			<name>Inner Nexus Repository</name> -->
+			<!-- <url>http://localhost:8081/repository/B-Repos</url> -->
+			<!-- <url>file://Users/yonghuipark/.m2/repository</url>
+		</repository>
+	</repositories> -->
 
 	<dependencies>
 		<dependency>

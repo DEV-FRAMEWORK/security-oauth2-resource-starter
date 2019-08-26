@@ -15,7 +15,9 @@ public class BoardController {
     @PreAuthorize("hasAnyRole('ADMIN')")
     public Map<String, String> list(){
         Map<String, String > map = new HashMap<>();
-        map.put("row","제대로 나오고 있어용 ");
+        map.put("row","Description");
+        map.put("1","Access Success to Resource Server");
+        map.put("2","리소스 서버에 접근 성공하셨니다.");
         return map;
     }
 }

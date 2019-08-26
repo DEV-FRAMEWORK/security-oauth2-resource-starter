@@ -38,7 +38,7 @@ public class BoardController {
         List<AdminModel> list = adminService.selectListAdmin(adminModel);  
        
         System.out.println("addate : "+list.get(0).getAdminId());
-    	return "OK";
+    	return "rooms";
     	
     }
 
